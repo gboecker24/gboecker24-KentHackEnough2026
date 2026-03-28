@@ -4,18 +4,24 @@
     background-color: khaki;
     color: black;
     position: relative;
+    bottom: 0px;
+    margin: 2px;
+    text-decoration: solid;
 }
 .text{
     font-size: 25px;
     text-align: left;
     color: black;
     position: relative;
+    bottom: 30px;
+    margin: 2px;
 }
 .subheading{
     font-size: 45px;
     color: black;
     background-color: deepskyblue;
     position: relative;
+<<<<<<< Updated upstream
 }
 
 nav {
@@ -33,4 +39,32 @@ nav {
 
 a:visited{
     color:#00aaff
+=======
+    text-align: left;
+    bottom: 0px;
+    text-decoration: underline;
+}
+.desc{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    position: relative;
+    bottom: 0px;
+    margin: 2px;
+}
+.SecTitle{
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    position: relative;
+    bottom: 0px;
+    margin: 2px;
+    text-decoration: solid;
+}
+.picture{
+    position: relative;
+    float:none;
+    width: 1000px;
+    bottom:20px;
+>>>>>>> Stashed changes
 }
