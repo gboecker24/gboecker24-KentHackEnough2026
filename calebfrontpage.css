@@ -30,7 +30,6 @@
 }
 .information{
     font-size: 20px;
-<<<<<<< HEAD
     color: black
 }
 
@@ -50,23 +49,9 @@ nav {
 a:visited{
     color:#00aaff
 }
-=======
-    color: black;
-    position:relative;
-    background-color: lightblue;
-    bottom: 150px;
-    right: 170px;
-  white-space: pre-wrap;
-  border: 1px solid #ccc;
-  padding: 15px;
-  max-width: 400px;
-  margin: 20px;
-  background-color: #f9f9f9; 
-  overflow: auto; 
-}
+
 .meet{
     font-size: 35px;
     color: black;
     background-color: orange;
 }
->>>>>>> 52bd683f8c91b5ebb9623fa08a36e5d0eb93a174
