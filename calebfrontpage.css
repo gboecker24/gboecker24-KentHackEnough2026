@@ -1,0 +1,16 @@
+.header{
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    background-color: antiquewhite;
+    position: relative;
+    bottom:100px
+}
+.subheader{
+    font-size: 50px;
+    text-align: center;
+    color:black;
+    background-color: antiquewhite;
+    position: relative;
+    bottom:200px
+}
