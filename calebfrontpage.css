@@ -14,3 +14,20 @@
     position: relative;
     bottom:200px
 }
+.michael{
+    float: right;
+    position: relative;
+    bottom: 250px
+}
+.Why{
+    font-size: 35px;
+    color: black;
+    background-color: orange;
+    float: left;
+    position: relative;
+    bottom: 250px
+}
+.information{
+    font-size: 20px;
+    color: black
+}
