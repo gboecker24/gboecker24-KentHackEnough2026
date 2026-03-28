@@ -1,0 +1,19 @@
+.header{
+    font-size: 100px;
+    text-align: center;
+    background-color: khaki;
+    color: black;
+    position: relative;
+}
+.text{
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    position: relative;
+}
+.subheading{
+    font-size: 45px;
+    color: black;
+    background-color: deepskyblue;
+    position: relative;
+}
