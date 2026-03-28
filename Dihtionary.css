@@ -1,3 +1,4 @@
+.header{
 .uppah{
     font-size: 100px;
     text-align: center;
@@ -16,38 +17,12 @@
     bottom: 30px;
     margin: 2px;
 }
+.subheading{
 .lowah{
     font-size: 45px;
     color: black;
     font-style: italic;
     position: relative;
-<<<<<<< Updated upstream
-=======
-    text-decoration: underline;
-}
-    .desc{
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    position: relative;
-    bottom: 0px;
-    margin: 2px;
-}
-.SecTitle{
-    font-size: 100px;
-    text-align: center;
-    color: red;
-    position: relative;
-    bottom: 0px;
-    margin: 2px;
-    text-decoration: solid;
-}
-.picture{
-    position: relative;
-    float:none;
-    width: 1000px;
-    bottom:20px;
->>>>>>> Stashed changes
 }
 
 nav {
@@ -65,7 +40,6 @@ nav {
 
 a:visited{
     color:#00aaff
-<<<<<<< Updated upstream
 }
 .desc{
     font-size: 20px;
@@ -89,6 +63,4 @@ a:visited{
     float:none;
     width: 1000px;
     bottom:20px;
-=======
->>>>>>> Stashed changes
 }
