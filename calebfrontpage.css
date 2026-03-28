@@ -30,7 +30,8 @@
 }
 .information{
     font-size: 20px;
-    color: black
+    color: black;
+    background-color:white;
 }
 
 nav {
@@ -53,5 +54,8 @@ a:visited{
 .meet{
     font-size: 35px;
     color: black;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
+}
+body{
+    background-image: url("Oldtimeymichael.png")
 }
