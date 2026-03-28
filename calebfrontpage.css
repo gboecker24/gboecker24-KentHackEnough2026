@@ -17,7 +17,7 @@
 .michael{
     float: right;
     position: relative;
-    bottom: 250px
+    bottom: 250px;
 }
 .Why{
     font-size: 35px;
@@ -25,9 +25,13 @@
     background-color: orange;
     float: left;
     position: relative;
-    bottom: 250px
+    bottom: 250px;
+
 }
 .information{
     font-size: 20px;
-    color: black
+    color: black;
+    position:relative;
+    bottom: 130px;
+    right: 150px;
 }
