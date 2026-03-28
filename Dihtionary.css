@@ -21,7 +21,6 @@
     color: black;
     font-style: italic;
     position: relative;
-<<<<<<< Updated upstream
 }
 
 nav {
@@ -39,10 +38,6 @@ nav {
 
 a:visited{
     color:#00aaff
-=======
-    text-align: left;
-    bottom: 0px;
-    text-decoration: underline;
 }
 .desc{
     font-size: 20px;
@@ -66,5 +61,4 @@ a:visited{
     float:none;
     width: 1000px;
     bottom:20px;
->>>>>>> Stashed changes
 }
