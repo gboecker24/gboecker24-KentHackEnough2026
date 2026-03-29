@@ -60,7 +60,7 @@ body {
     height: auto;
     position: absolute;
     right: -100px;
-    animation: moveObstacle 2.5s linear forwards;
+    animation: moveObstacle 3s linear forwards;
     z-index: 5;
     pointer-events: none;
 }
