@@ -2,7 +2,7 @@
     font-size: 100px;
     text-align: center;
     color: black;
-    background-color: rgb(171, 78, 4);
+    background-color: rgb(247, 180, 125);
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -10,7 +10,7 @@
     font-size: 35px;
     text-align: center;
     color: black;
-    background-color: rgb(171, 78, 4);
+    background-color: rgb(247, 180, 125);
     margin:0px;
 }
 .Why{
@@ -64,5 +64,5 @@ body{
 }
 
 body{
-    background-color: rgb(176, 168, 159);
+    background-color: rgb(215, 209, 202);
 }
