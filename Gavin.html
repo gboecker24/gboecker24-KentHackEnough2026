@@ -4,66 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael</title>
+
     <style>
-        
-        .michael{
+        .michael {
             width: 100px;
-            height:auto;
+            height: auto;
             transition: width 0.1s ease;
             display: block;
             margin: auto;
-            align-self: auto;
+            object-fit:contain;
         }
 
-      nav {
-        display: flex;
-        padding: 20px;
-        list-style: none;
-        margin-left: 170px;
-        margin-right: 170px;
-        justify-content: space-evenly;
-        background-color: rgb(182, 234, 255);
-        border: 4px solid #00aaff;
-        font-size: 25px;
+        nav {
+            display: flex;
+            padding: 20px;
+            list-style: none;
+            margin-left: 170px;
+            margin-right: 170px;
+            justify-content: space-evenly;
+            background-color: rgb(182, 234, 255);
+            border: 4px solid #00aaff;
+            font-size: 25px;
+        }
 
-      }
+        a:visited {
+            color: #00aaff;
+        }
 
-    a:visited{
-        color:#00aaff
-    }
+        li {
+            text-align: left;
+            padding: 20px 40px;
+            border-right: #00aaff solid 4px;
+        }
 
-      li {
-        text-align: left;
-        padding: 20px 40px;
-        border-right: #00aaff solid 4px;
-      }
-
-      li:last-child {
-        border-right: none;
-      }
-
+        li:last-child {
+            border-right: none;
+        }
     </style>
 </head>
+
 <body>
+
     <nav>
         <a href="Caleb.html">Home</a>
         <a href="Garin.html">Dihtionary</a>
         <a href="Gavin.html">Michael</a>
     </nav>
-    <nav>
-        <a href="Caleb.html">Home</a>
-        <a href="Garin.html">Dihtionary</a>
-        <a href="Gavin.html">Michael</a>
-    </nav>
-    <img src="photos/bigmichael.png" alt="Michael" class="michael">
-    <script>
-        const michael = document.querySelector('.michael');
-        let currentWidth = 100;
-        
-        michael.addEventListener('click', function() {
-            currentWidth = currentWidth + 10;
+
+    <h2 style="text-align:center; margin-top: 20px;">
+        Make sure you don't touch Michael too much, or he will get angry. He is very sensitive.
+    </h2>
+
+    <img id="imageToSwap" src="photos/bigmichael.png" alt="Michael" class="michael">
+
+<script>
+    const michael = document.getElementById('imageToSwap');
+    let currentWidth = 100;
+    let anger = 55;
+    let hasSwapped = false;
+    
+    const angryImage = new Image();
+    angryImage.width = 870;
+    angryImage.src = "photos/angrybigmichael.png";
+
+    michael.addEventListener('click', function () {
+
+        if (currentWidth < 300) {
+            currentWidth += 8;
+        }
+        else{
+            currentWidth = 870;
+        }
+        if (anger < 130) {
+            anger += 3;
+        }
+
+        this.style.filter = `saturate(${anger * 2}%)`;
+        this.style.width = currentWidth + 'px';
+
+        if (!hasSwapped && currentWidth >= 293) {
+            // Set the final width and ensure height is auto before swap
+            currentWidth = 870;
             this.style.width = currentWidth + 'px';
-        });
-    </script>
+            this.style.height = 'auto';
+            
+            // Swap the image (now the dimensions are already set)
+            this.src = angryImage.src;
+            hasSwapped = true;
+        }
+    });
+</script>
+
+
 </body>
 </html>
