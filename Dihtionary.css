@@ -42,7 +42,7 @@ a:visited{
     color:#00aaff
 }
 .desc{
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     color: black;
     position: relative;
@@ -68,4 +68,34 @@ a:visited{
 
 body{
     background-color: rgb(215, 209, 202);
+}
+
+.lowah2{
+    text-align: center;
+    background-color: rgb(247, 180, 125);
+    padding: 0px;
+    margin:15px;
+    font-size:45px;
+    color: black;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.futuremichael{
+    text-align:center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0;
+}
+
+.futuremichael img{
+    display: block;
+    margin: 0 auto;
+}
+
+.ahhtext{
+    text-align:center;
+    font-size:35px;
+    margin: 0px;
+    padding: 0px;
 }
