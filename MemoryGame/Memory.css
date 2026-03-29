@@ -1,6 +1,6 @@
 body {
-    min-height: 100vh;
-    min-width: 100vh;
+    min-height: 100vw;
+    min-width: 100vw;
     background-color: #12181f;
     color:white;
 }
@@ -31,11 +31,11 @@ p {
 }
 
 .grid-container {
-    display:grid;
+    display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat (6, 140px);
-    grid-template-rows: repeat (2, calc(140px/2 * 3))
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
 }
 
 .card{

@@ -2,29 +2,34 @@ const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
+let score = 0;
 
 document.querySelector(".score").textContent = score;
 
 fetch("./cards.json")
     .then((res) => res.json())
     .then((data) => {
-        cards = [...data,...data];
+        cards = [...data, ...data];
         shuffleCards();
         generateCards();
+    })
+    .catch((error) => {
+        console.error("Failed to load cards.json:", error);
+        alert("Unable to load cards.json. Please run this page from a local server and check the browser console.");
     });
 
-    function shuffleCards() {
-        let currentIndex = cards.length;
-        randomIndex,
-        temporaryValue;
+function shuffleCards() {
+    let currentIndex = cards.length;
+    let randomIndex, temporaryValue;
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
         temporaryValue = cards[currentIndex];
         cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex] = temporaryValue
+        cards[randomIndex] = temporaryValue;
     }
-    }
+}
+
 function generateCards() {
     for (let card of cards) {
         const cardElement = document.createElement("div");
@@ -32,10 +37,11 @@ function generateCards() {
         cardElement.setAttribute("data-name", card.name);
         cardElement.innerHTML = `
         <div class="front">
-            <img class= "front-image" src=${card.image} />
+            <img class="front-image" src="${card.image}" />
         </div>
-        <div class= "back" ></div>
+        <div class="back"></div>
         `;
+        cardElement.addEventListener("click", flipCard);
         gridContainer.appendChild(cardElement);
     }
 }
