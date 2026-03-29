@@ -1,4 +1,4 @@
-.header{
+.uppah{
     font-size: 100px;
     text-align: center;
     background-color: khaki;
@@ -8,6 +8,7 @@
     margin: 2px;
     text-decoration: solid;
 }
+
 .text{
     font-size: 25px;
     text-align: left;
@@ -16,7 +17,7 @@
     bottom: 30px;
     margin: 2px;
 }
-.subheading{
+.lowah{
     font-size: 45px;
     color: black;
     font-style: italic;
