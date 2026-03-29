@@ -20,7 +20,10 @@ var images = [
     '../photos/GarinFraley.png',
     '../photos/touchingED1.png',
     '../photos/touchingED2.png',
-    '../photos/touchingED3.png'
+    '../photos/touchingED3.png',
+    '../photos/touchingED4.jpg',
+    '../photos/touchingED5.jpg',
+    '../photos/touchingED6.jpg',
 ];
 
 // Get game dimensions
@@ -38,7 +41,7 @@ function createObstacle() {
     obstacleCreationInProgress = true;
     
     var dimensions = getGameDimensions();
-    var obstacleWidth = window.innerWidth <= 768 ? 160 : 250;
+    var obstacleWidth = window.innerWidth <= 768 ? 160 : 200;
     
     // Random Y position for the obstacle
     var randomY = Math.random() * (dimensions.height - 100) + 50;
@@ -80,7 +83,7 @@ function createObstacle() {
             var index = obstacles.findIndex(obs => obs.element === obstacleContainer);
             if (index !== -1) obstacles.splice(index, 1);
         }
-    }, 2500);
+    }, 5000);
     
     // Reset creation flag
     setTimeout(function() {
@@ -96,7 +99,7 @@ function gameLoop() {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var maxBottom = dimensions.height - character.offsetHeight - 10;
     
-    // Apply gravity to velocity (like original Flappy Bird)
+    // Apply gravity to velocity
     velocity += gravity;
     var newTop = characterTop + velocity;
     
