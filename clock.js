@@ -6,10 +6,10 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
-    setTimeout(startTime, 1000); // Update the time every 1000 milliseconds (1 second)
+    setTimeout(startTime, 1000);
 }
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i}; // Add zero in front of numbers < 10 (e.g. 5 -> 05)
+    if (i < 10) {i = "0" + i};
     return i;
 }
