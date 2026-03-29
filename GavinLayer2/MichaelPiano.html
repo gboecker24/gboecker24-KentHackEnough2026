@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MichaelPiano</title>
-
     <style>
+
+        .michael-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
         .michael {
-            width: 100px;
+            width: 120px;
             height: auto;
-            transition: width 0.1s ease;
+            cursor: pointer;
+            transition: transform 0.1s ease, filter 0.1s;
             display: block;
-            margin: auto;
-            object-fit:contain;
+            object-fit: contain;
+            border-radius: 20px;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .michael:active {
+            transform: scale(0.95);
+        }
+
+
+        a:visited {
+            color: #00aaff;
         }
 
         nav {
@@ -27,36 +50,76 @@
             font-size: 25px;
         }
 
-        a:visited {
-            color: #00aaff;
+        h2{
+            text-align: center;
+            margin-top: 20px;
         }
 
-        li {
-            text-align: left;
-            padding: 20px 40px;
-            border-right: #00aaff solid 4px;
+        p{
+            text-align: center;
         }
 
-        li:last-child {
-            border-right: none;
-        }
     </style>
 </head>
-
 <body>
 
-    <nav>
-        <a href="../Caleb.html">Home</a>
-        <a href="../Garin.html">Dictionary</a>
-        <a href="../Gavin.html">Michael</a>
-    </nav>
+<nav>
+    <a href="../Caleb.html">Home</a>
+    <a href="../Garin.html">Dictionary</a>
+    <a href="../Gavin.html">Michael</a>
+</nav>
 
-    <h2 style="text-align:center; margin-top: 20px;">
-    </h2>
-
-
+<h2>Michael Piano</h2>
+<p>Each Michael is a little unique</p>
 
 
+<div class="michael-row" id="michaelRow">
+</div>
+
+<script>
+    const noteFiles = [
+        "Notes/G1.wav",
+        "Notes/A2.wav",
+        "Notes/B3.wav",
+        "Notes/C4.wav",
+        "Notes/D5.wav",
+        "Notes/E6.wav",
+        "Notes/F7.wav"
+    ];
+
+    function playSound(file) {
+        let audio = new Audio(file);
+        audio.play();
+    }
+
+    const row = document.getElementById("michaelRow");
+
+for (let i = 0; i < 7; i++) {
+    let img = document.createElement("img");
+    
+    const imagePaths = [
+        "Photos/G.png",
+        "Photos/A.png",
+        "Photos/B.png",
+        "Photos/C.png",
+        "Photos/D.png",
+        "Photos/E.png",
+        "Photos/F.png"
+    ];
+    
+    img.src = imagePaths[i];
+    img.classList.add("michael");
+    
+    img.addEventListener("click", (function(index) {
+        return function() {
+            playSound(noteFiles[index]);
+        };
+    })(i));
+    
+    row.appendChild(img);
+}
+
+</script>
 
 </body>
 </html>
