@@ -34,13 +34,13 @@ p {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px / 2 * 3));
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows: repeat(2, calc(100px / 2 * 3));
 }
 
 .card{
-    height: calc(140px / 2 * 3);
-    width: 140px;
+    height: calc(100px / 2 * 3);
+    width: 100px;
     border-radius: 10px;
     background-color: white;
     position: relative;
@@ -49,8 +49,8 @@ p {
 }
 
 .front-image{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .card.flipped {
