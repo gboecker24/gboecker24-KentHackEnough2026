@@ -3,35 +3,19 @@
     text-align: center;
     color: black;
     background-color: antiquewhite;
-    position: relative;
-    bottom:100px
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .subheader{
     font-size: 50px;
     text-align: center;
     color:black;
     background-color: antiquewhite;
-    position: relative;
-    bottom:200px
-}
-.michael{
-    float: right;
-    position: relative;
-    bottom: 250px;
+    margin:0px;
 }
 .Why{
     font-size: 35px;
-    color: black;
-    background-color: orange;
-    float: left;
-    position: relative;
-    bottom: 250px;
 
-}
-.information{
-    font-size: 20px;
-    color: black;
-    background-color:white;
 }
 
 nav {
@@ -58,4 +42,18 @@ a:visited{
 }
 body{
     background-image: url("Oldtimeymichael.png")
+}
+
+.flexy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: flex-start;
+    padding: 0px;
+    margin:0px;
+}
+.meet{
+    min-width: 300px
 }
