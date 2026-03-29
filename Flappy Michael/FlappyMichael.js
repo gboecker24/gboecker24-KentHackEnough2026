@@ -1,72 +1,52 @@
-const obstacle = document.querySelector(".obstacle");
-const block = document.querySelector(".block");
-const hole = document.querySelector(".hole");
-const character = document.getElementById("character");
+    var block = document.getElementById("block");
+var hole = document.getElementById("hole");
+var character = document.getElementById("character");
+var jumping = 0;
+var counter = 0;
 
-let jumping = false;
-let score = 0;
-
-hole.addEventListener("animationiteration", () => {
-    const randomTop = Math.floor(Math.random() * 250) + 100;
-    hole.style.top = randomTop + "px";
-
-    // Randomize block image
-    const images = [
+hole.addEventListener('animationiteration', () => {
+    var random = -((Math.random()*300)+150);
+    hole.style.top = random + "px";
+    // Randomize block background image
+    var images = [
         '../photos/GarinFraley.png',
         '../photos/touchingED1.png',
         '../photos/touchingED2.png',
         '../photos/touchingED3.png'
     ];
-    block.style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
-
-    score++;
+    var imgIndex = Math.floor(Math.random() * images.length);
+    block.style.backgroundImage = 'url(' + images[imgIndex] + ')';
+    counter++;
 });
 
-setInterval(() => {
-    const charRect = character.getBoundingClientRect();
-    const blockRect = block.getBoundingClientRect();
-    const holeRect = hole.getBoundingClientRect();
-
-    // Gravity
-    if (!jumping) {
-        character.style.top = (character.offsetTop + 3) + "px";
+setInterval(function(){
+    var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    if(jumping==0){
+        character.style.top = (characterTop+3)+"px";
     }
-
-    // Collision detection
-    const touchingObstacle =
-        charRect.right > blockRect.left &&
-        charRect.left < blockRect.right;
-
-    const outsideHole =
-        charRect.top < holeRect.top ||
-        charRect.bottom > holeRect.bottom;
-
-    if (touchingObstacle && outsideHole) {
-        alert("Game Over! Score: " + score);
-        character.style.top = "100px";
-        score = 0;
+    var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    var holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    var cTop = -(500-characterTop);
+    if((characterTop>480)||((blockLeft<20)&&(blockLeft>-50)&&((cTop<holeTop)||(cTop>holeTop+130)))){
+        alert("Game over. Score: "+(counter-1));
+        character.style.top = 100 + "px";
+        counter=0;
     }
+},10);
 
-    // Floor death
-    if (character.offsetTop > 460) {
-        alert("Game Over! Score: " + score);
-        character.style.top = "100px";
-        score = 0;
-    }
-
-}, 10);
-
-function jump() {
-    jumping = true;
-    let count = 0;
-
-    const jumpInterval = setInterval(() => {
-        if (count < 15) {
-            character.style.top = (character.offsetTop - 5) + "px";
-        } else {
-            clearInterval(jumpInterval);
-            jumping = false;
+function jump(){
+    jumping = 1;
+    let jumpCount = 0;
+    var jumpInterval = setInterval(function(){
+        var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        if((characterTop>6)&&(jumpCount<15)){
+            character.style.top = (characterTop-5)+"px";
         }
-        count++;
-    }, 10);
+        if(jumpCount>20){
+            clearInterval(jumpInterval);
+            jumping=0;
+            jumpCount=0;
+        }
+        jumpCount++;
+    },10);
 }
