@@ -71,7 +71,7 @@
 
 <nav>
     <a href="../Caleb.html">Home</a>
-    <a href="../Garin.html">Dictionary</a>
+    <a href="../Garin.html">Dihtionary</a>
     <a href="../Gavin.html">Michael</a>
 </nav>
 
@@ -80,6 +80,12 @@
 
 
 <div class="michael-row" id="michaelRow">
+</div>
+
+<div style="text-align:center; margin-top:30px;">
+    <button id="SpeedDown" style="font-size:24px; padding:10px 20px;">−</button>
+    <span id="SpeedDisplay" style="font-size:22px; margin:0 15px;">Speed: 1.00×</span>
+    <button id="SpeedUp" style="font-size:24px; padding:10px 20px;">+</button>
 </div>
 
 <script>
@@ -123,6 +129,28 @@ for (let i = 0; i < 7; i++) {
     })(i));
     
     row.appendChild(img);
+}
+
+let speed = 1.0;
+
+function playSound(file) {
+    let audio = new Audio(file);
+    audio.playbackRate = speed;
+    audio.play();
+}
+
+document.getElementById("SpeedUp").addEventListener("click", () => {
+    speed = speed + 0.1;
+    updatePitchDisplay();
+});
+
+document.getElementById("SpeedDown").addEventListener("click", () => {
+    speed = Math.max(0.1, speed - 0.1);
+    updatePitchDisplay();
+});
+
+function updatePitchDisplay() {
+    document.getElementById("SpeedDisplay").textContent = `Speed: ${speed.toFixed(2)}×`;
 }
 
 </script>
