@@ -4,19 +4,50 @@ let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 
+const cardsData = [
+    {
+        "image": "Photos/MichaelSquared2.png",
+        "name": "Michael"
+    },
+    {
+        "image": "Photos/FrenchMichael2Square.png",
+        "name": "French Michael"
+    },
+    {
+        "image": "Photos/OldTImeyMichaelSquare.png",
+        "name": "Old Timey Michael"
+    },
+    {
+        "image": " Photos/Michael67squared.png",
+        "name": "Michael on Tyler"
+    },
+    {
+        "image": "Photos/MoggingMichaelSqaure.png",
+        "name": "MOgging Michael"
+    },
+    {
+        "image": "Photos/FrenchMichaelSquared.png",
+        "name": "Michael Protection"
+    },
+    {
+        "image": "Photos/MaliciousMichaelSquared.png",
+        "name": "Malicious Michael"
+    },
+    {
+        "image": "Photos/Michael8Squared.png",
+        "name": "Michael Booth"
+    },
+    {
+        "image": "Photos/UndeadMichaelSquared.png",
+        "name": "Undead Michael"
+    }
+];
+
 document.querySelector(".score").textContent = score;
 
-fetch("./cards.json")
-    .then((res) => res.json())
-    .then((data) => {
-        cards = [...data, ...data];
-        shuffleCards();
-        generateCards();
-    })
-    .catch((error) => {
-        console.error("Failed to load cards.json:", error);
-        alert("Unable to load cards.json. Please run this page from a local server and check the browser console.");
-    });
+cards = [...cardsData, ...cardsData];
+shuffleCards();
+generateCards();
 
 function shuffleCards() {
     let currentIndex = cards.length;
