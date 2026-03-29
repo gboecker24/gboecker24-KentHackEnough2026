@@ -6,36 +6,40 @@ let score = 0;
 
 const cardsData = [
     {
-        "image": "../photos/Michael.png",
+        "image": "Photos/MichaelSquared2.png",
         "name": "Michael"
     },
     {
-        "image": "../photos/FrenchMichael2.png",
+        "image": "Photos/FrenchMichael2Square.png",
         "name": "French Michael"
     },
     {
-        "image": "../photos/Oldtimeymichael.png",
+        "image": "Photos/OldTImeyMichaelSquare.png",
         "name": "Old Timey Michael"
     },
     {
-        "image": "../photos/Michael67.png",
+        "image": " Photos/Michael67squared.png",
         "name": "Michael on Tyler"
     },
     {
-        "image": "../photos/MoggingMichael.png",
+        "image": "Photos/MoggingMichaelSqaure.png",
         "name": "MOgging Michael"
     },
     {
-        "image": "../photos/FrenchMichael.png",
+        "image": "Photos/FrenchMichaelSquared.png",
         "name": "Michael Protection"
     },
     {
-        "image": "../photos/MaliciousMichael.png",
+        "image": "Photos/MaliciousMichaelSquared.png",
         "name": "Malicious Michael"
     },
     {
-        "image": "../photos/Michale8.png",
+        "image": "Photos/Michael8Squared.png",
         "name": "Michael Booth"
+    },
+    {
+        "image": "Photos/UndeadMichaelSquared.png",
+        "name": "Undead Michael"
     }
 ];
 
