@@ -7,6 +7,15 @@ var counter = 0;
 hole.addEventListener('animationiteration', () => {
     var random = -((Math.random()*300)+150);
     hole.style.top = random + "px";
+    // Randomize block background image
+    var images = [
+        '../photos/AgreeableMichael.png',
+        '../photos/bigmichael.png',
+        '../photos/FrenchMichael.png',
+        '../photos/Oldtimeymichael.png'
+    ];
+    var imgIndex = Math.floor(Math.random() * images.length);
+    block.style.backgroundImage = 'url(' + images[imgIndex] + ')';
     counter++;
 });
 setInterval(function(){
