@@ -9,10 +9,10 @@ hole.addEventListener('animationiteration', () => {
     hole.style.top = random + "px";
     // Randomize block background image
     var images = [
-        '../photos/AgreeableMichael.png',
-        '../photos/bigmichael.png',
-        '../photos/FrenchMichael.png',
-        '../photos/Oldtimeymichael.png'
+        '../photos/GarinFraley.png',
+        '../photos/touchingED1.png',
+        '../photos/touchingED2.png',
+        '../photos/touchingED3.png'
     ];
     var imgIndex = Math.floor(Math.random() * images.length);
     block.style.backgroundImage = 'url(' + images[imgIndex] + ')';
