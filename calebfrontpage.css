@@ -2,15 +2,15 @@
     font-size: 100px;
     text-align: center;
     color: black;
-    background-color: antiquewhite;
+    background-color: rgb(171, 78, 4);
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .subheader{
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
-    color:black;
-    background-color: antiquewhite;
+    color: black;
+    background-color: rgb(171, 78, 4);
     margin:0px;
 }
 .Why{
@@ -38,7 +38,10 @@ a:visited{
 .meet{
     font-size: 35px;
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(182, 234, 255);
+    border: 4px solid #00aaff;
+    display: inline-block;
+    padding:5px;
 }
 body{
     background-image: url("Oldtimeymichael.png")
@@ -55,5 +58,11 @@ body{
     margin:0px;
 }
 .meet{
-    min-width: 300px
+    width: fit-content;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+body{
+    background-color: rgb(176, 168, 159);
 }

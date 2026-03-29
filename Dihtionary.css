@@ -1,7 +1,7 @@
 .uppah{
     font-size: 100px;
     text-align: center;
-    background-color: khaki;
+    background-color: rgb(171, 78, 4);
     color: black;
     position: relative;
     bottom: 0px;
@@ -39,7 +39,7 @@ nav {
 }
 
 a:visited{
-    color:#00aaff
+    color:#000000
 }
 .desc{
     font-size: 20px;
@@ -64,4 +64,8 @@ a:visited{
     width: 750px;
     bottom:20px;
     height: 421.875px;
+}
+
+body{
+    background-color: rgb(176, 168, 159);
 }
