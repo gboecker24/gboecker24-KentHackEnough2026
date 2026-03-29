@@ -56,6 +56,18 @@ body{
     align-items: flex-start;
     padding: 0px;
     margin:0px;
+    flex-wrap:wrap;
+}
+
+.Why{
+    width: 45%;
+}
+
+
+
+#clock, .clockhead{
+    margin-left:auto;
+    margin-top: -200px;
 }
 .meet{
     width: fit-content;
@@ -65,4 +77,24 @@ body{
 
 body{
     background-color: rgb(215, 209, 202);
+}
+
+#clock{
+    color: black;
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+}
+
+.clockhead{
+    color: black;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+}
+
+.clockhead{
+    margin-left: 525px;
+    
+}
+#clock{
+    margin-right: 300px;
 }
